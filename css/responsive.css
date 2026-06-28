@@ -1,0 +1,291 @@
+/* ===================================================
+   ALEX MORGAN PORTFOLIO - RESPONSIVE STYLESHEET
+   Mobile-first breakpoints for all screen sizes
+   =================================================== */
+
+/* ----- Small devices (landscape phones, 576px and up) ----- */
+@media (min-width: 576px) {
+    .container {
+        padding: 0 var(--spacing-6);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-5xl);
+    }
+
+    .page-title {
+        font-size: var(--font-size-5xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .cta-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .logo-text {
+        display: inline;
+    }
+
+    .contact-form {
+        padding: var(--spacing-8);
+    }
+
+    .success-message {
+        padding: var(--spacing-12) var(--spacing-8);
+    }
+}
+
+/* ----- Medium devices (tablets, 768px and up) ----- */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-8);
+    }
+
+    /* Navigation */
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: static;
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: var(--spacing-20) 0;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Projects Grid */
+    .projects-preview,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials Grid */
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+        grid-template-columns: 2fr 3fr;
+        gap: var(--spacing-16);
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* ----- Large devices (desktops, 992px and up) ----- */
+@media (min-width: 992px) {
+    /* Hero */
+    .hero {
+        padding: var(--spacing-20) 0 10rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-description {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Bio Grid */
+    .bio-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-16);
+        align-items: center;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Contact Form */
+    .contact-form {
+        padding: var(--spacing-10);
+    }
+}
+
+/* ----- Extra large devices (large desktops, 1200px and up) ----- */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .page-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* ----- Print Styles ----- */
+@media print {
+    /* Hide non-essential elements */
+    .skip-link,
+    .nav-toggle,
+    .hero-bg,
+    .btn,
+    .filter-group,
+    .project-links,
+    .social-links,
+    .social-buttons,
+    .contact-form,
+    .success-message,
+    form {
+        display: none !important;
+    }
+
+    /* Reset backgrounds and colors */
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .header {
+        position: static;
+        background: #fff !important;
+        box-shadow: none !important;
+    }
+
+    .hero {
+        background: #fff !important;
+        color: #000 !important;
+        padding: 2rem 0 !important;
+    }
+
+    .hero-title,
+    .hero-title .highlight {
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
+    }
+
+    .hero-subtitle,
+    .hero-description {
+        color: #333 !important;
+    }
+
+    .cta {
+        display: none !important;
+    }
+
+    .footer {
+        background: #fff !important;
+        color: #000 !important;
+        border-top: 1px solid #ccc;
+    }
+
+    /* Show URLs for links */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* Page breaks */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    .project-card,
+    .skill-card,
+    .testimonial-card {
+        page-break-inside: avoid;
+    }
+}
+
+/* ----- High Contrast Mode ----- */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary-600: #0000ee;
+        --color-surface-500: #000;
+        --color-surface-600: #000;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        border-width: 2px;
+    }
+
+    .nav-link.active {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
+/* ----- Dark Mode (User Preference) ----- */
+@media (prefers-color-scheme: dark) {
+    /* 
+     * Note: This portfolio uses a light theme by default.
+     * Uncomment and customize the rules below to enable dark mode support.
+     */
+    
+    /*
+    :root {
+        --color-surface-50: #0f172a;
+        --color-surface-100: #1e293b;
+        --color-surface-200: #334155;
+        --color-surface-300: #475569;
+        --color-surface-400: #64748b;
+        --color-surface-500: #94a3b8;
+        --color-surface-600: #cbd5e1;
+        --color-surface-700: #e2e8f0;
+        --color-surface-800: #f1f5f9;
+        --color-surface-900: #f8fafc;
+    }
+
+    body {
+        background-color: var(--color-surface-50);
+        color: var(--color-surface-900);
+    }
+
+    .header {
+        background-color: rgba(15, 23, 42, 0.95);
+    }
+
+    .skill-card,
+    .project-card,
+    .testimonial-card,
+    .faq-item,
+    .contact-form {
+        background-color: var(--color-surface-100);
+        border-color: var(--color-surface-200);
+    }
+    */
+}
